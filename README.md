@@ -102,21 +102,9 @@ accuracy                           0.81     150
 Try the model online here:  
 👉 [https://titanic-survival-prediction-65jqucqnunqwc5ipknnjeu.streamlit.app](https://titanic-survival-prediction-65jqucqnunqwc5ipknnjeu.streamlit.app)
 
-1. **Streamlit App** (`streamlit_app.py`):  
+ **Streamlit App** (`streamlit_app.py`):  
    - Enter passenger details (Pclass, Sex, Age, SibSp, Parch, Fare, etc.) in the sidebar.  
    - Click **Predict Survival** to view the survival probability and final prediction.
-
-2. **Flask API** (`app.py`):  
-   *(Not implemented in this version)*
-
-3. **Dockerfile** (optional)  
-   ```dockerfile
-   FROM python:3.10-slim
-   WORKDIR /app
-   COPY requirements.txt .
-   RUN pip install -r requirements.txt
-   COPY . .
-   CMD ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"].
 ---
 
 ## 📚 Next Steps
