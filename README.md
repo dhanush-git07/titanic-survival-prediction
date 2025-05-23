@@ -69,7 +69,7 @@ y_test_pred = tuned_rf.predict(X_test)
 print("Test Accuracy: ", accuracy_score(y_test, y_test_pred))
 print(classification_report(y_test, y_test_pred))
 ```
- 
+
 - **Test Accuracy**: 0.8111
 
 ```text
@@ -96,22 +96,27 @@ accuracy                           0.81     150
 
 ---
 
-## 🚀 Demo & Deployment (Optional)
+## 🚀 Demo & Deployment
+
+**Live Streamlit App**  
+Try the model online here:  
+👉 [https://titanic-survival-prediction-65jqucqnunqwc5ipknnjeu.streamlit.app](https://titanic-survival-prediction-65jqucqnunqwc5ipknnjeu.streamlit.app)
 
 1. **Streamlit App** (`streamlit_app.py`):  
-   - UI to enter passenger features → shows survival probability.  
+   - Enter passenger details (Pclass, Sex, Age, SibSp, Parch, Fare, etc.) in the sidebar.  
+   - Click **Predict Survival** to view the survival probability and final prediction.
+
 2. **Flask API** (`app.py`):  
-   - `/predict` endpoint that returns JSON `{ "survived": 0/1, "probability": 0.85 }`.  
-3. **Dockerfile** Example:  
+   *(Not implemented in this version)*
+
+3. **Dockerfile** (optional)  
    ```dockerfile
    FROM python:3.10-slim
    WORKDIR /app
    COPY requirements.txt .
    RUN pip install -r requirements.txt
    COPY . .
-   CMD ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
-   ```
-
+   CMD ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"].
 ---
 
 ## 📚 Next Steps
