@@ -1,8 +1,8 @@
 # Titanic Survival Prediction
 
-**Author**: _Your Name_  
+**Author**: DHANUSH REDDY THUMMA
 **Date**: May 2025  
-**GitHub**: [github.com/yourusername/ML-Project-Titanic](https://github.com/yourusername/ML-Project-Titanic)
+**GitHub**: [github.com/dhanush-git07/titanic-survival-prediction](https://github.com/dhanush-git07/titanic-survival-prediction)
 
 ---
 
@@ -69,19 +69,26 @@ y_test_pred = tuned_rf.predict(X_test)
 print("Test Accuracy: ", accuracy_score(y_test, y_test_pred))
 print(classification_report(y_test, y_test_pred))
 ```
+ 
+- **Test Accuracy**: 0.8111
 
-- **Test Accuracy**: _Your final number here (e.g., 0.85xx)_  
+```text
+precision    recall  f1-score   support
+       0       0.83      0.94      0.88     100  
+       1       0.84      0.63      0.72      50
+
+accuracy                           0.81     150
 
 ---
 
 ## 📊 Interpretation & Insights
 
 1. **Top-5 Feature Importances** (Random Forest):  
-   1. Sex  
-   2. Pclass  
-   3. Title_Miss  
-   4. AgeGroup_Adult  
-   5. Fare  
+   1. Title_Mr  
+   2. Sex  
+   3. Fare  
+   4. Pclass  
+   5. Age  
 
 2. **Error Analysis**  
    - False negatives often had titles like “Master” or “Miss” with moderate fare/class.  
